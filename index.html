@@ -7,7 +7,7 @@
 <style type="text/css">
 
 body {
-	padding: 15px;
+    padding: 15px;
 }
 
 </style>
@@ -32,18 +32,18 @@ $( document ).ready(function() {
 
 function getPass()
 {
-	var pass = "";
-	for (i = 0; i < 10; i++) { 
-		pass += getWord() + " ";
-	}
-	pass.substring(0,-1);
-	$("#password").text(pass);
+    var pass = "";
+    for (i = 0; i < 10; i++) { 
+        pass += getWord() + " ";
+    }
+    
+    $("#password").text(pass.trim());
 }
 
 function getWord()
 {
-	var rand  = Math.floor(Math.random() * 7776);
-	return words[rand];
+    var rand = Math.floor(Math.random() * 7776);
+    return words[rand];
 }
 </script>
 </body>
